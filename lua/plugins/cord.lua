@@ -3,9 +3,6 @@ return {
     "vyfor/cord.nvim",
     event = "VeryLazy",
     opts = {
-      usercmds = {
-        enable = true,
-      },
       editor = {
         client = "neovim",
         tooltip = "The Superior Text Editor",

@@ -23,3 +23,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 })
 vim.g.snacks_animate = false
 vim.g.noice_animate = false
+vim.opt.cursorline = false

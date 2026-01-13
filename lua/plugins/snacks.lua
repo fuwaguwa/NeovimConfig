@@ -2,6 +2,19 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      terminal = {
+        shell = "/usr/bin/fish",
+      },
+      indent = {
+        hl = {
+          "SnacksIndent1", -- Regular indent lines
+        },
+      },
+      dashboard = {
+        preset = {
+          header = "",
+        },
+      },
       scroll = {
         enabled = false,
       },

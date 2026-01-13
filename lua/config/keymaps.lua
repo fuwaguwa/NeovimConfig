@@ -1,20 +1,26 @@
 -- Keymaps are automatically loaded on the VeryLazy event
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
+
 -- Close buffer
 vim.keymap.set("n", "<M-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
 
--- Jump to buffer by number (Alt+1 through Alt+9)
+-- Jump to buffer by number (Alt+1 through Alt+9) - safe version
 for i = 1, 9 do
   vim.keymap.set("n", "<M-" .. i .. ">", function()
-    require("bufferline").go_to(i, true)
+    local ok, bufferline = pcall(require, "bufferline")
+    if ok then
+      bufferline.go_to(i, true)
+    else
+      vim.cmd("buffer " .. i)
+    end
   end, { desc = "Go to buffer " .. i })
 end
 
 vim.keymap.set("i", "<M-l>", "<Right>", { desc = "Move right in insert mode" })
 vim.keymap.set("i", "<M-h>", "<Left>", { desc = "Move left in insert mode" })
 
--- Exit snippet placeholder with Enter when not accepting completion
+-- Exit snippet placeholder
 vim.keymap.set("i", "<C-j>", function()
   if vim.snippet and vim.snippet.active() then
     vim.snippet.stop()
@@ -48,7 +54,6 @@ vim.keymap.set("n", "<leader>tt", function()
   })
 end, { desc = "Terminal Bottom" })
 
--- Ctrl+/ uses the same cwd to toggle the right terminal
 vim.keymap.set({ "n", "t" }, "<C-/>", function()
   local pos = terminals.last or "float"
   local opts = {
