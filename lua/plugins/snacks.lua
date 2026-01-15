@@ -16,7 +16,7 @@ return {
         },
       },
       scroll = {
-        enabled = false,
+        enabled = true,
       },
       -- Enable explorer
       explorer = {

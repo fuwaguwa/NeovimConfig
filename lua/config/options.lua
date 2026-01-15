@@ -1,7 +1,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Set tabs to 2 spaces
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
@@ -21,6 +20,8 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     vim.opt_local.softtabstop = 2
   end,
 })
-vim.g.snacks_animate = false
-vim.g.noice_animate = false
+-- vim.g.snacks_animate = false
+-- vim.g.noice_animate = false
 vim.opt.cursorline = false
+vim.opt.wrap = true -- Enable line wrapping
+vim.opt.smoothscroll = true -- Enable smooth scrolling
