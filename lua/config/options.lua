@@ -20,8 +20,6 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
     vim.opt_local.softtabstop = 2
   end,
 })
--- vim.g.snacks_animate = false
--- vim.g.noice_animate = false
 vim.opt.cursorline = false
-vim.opt.wrap = true -- Enable line wrapping
-vim.opt.smoothscroll = true -- Enable smooth scrolling
+vim.opt.wrap = true
+vim.opt.smoothscroll = true

@@ -27,7 +27,6 @@ vim.keymap.set("i", "<C-j>", function()
   end
 end, { desc = "Exit snippet placeholder" })
 
--- Terminal keybinds
 local terminals = {}
 
 vim.keymap.set("n", "<leader>tf", function()
@@ -45,14 +44,6 @@ vim.keymap.set("n", "<leader>tr", function()
     cwd = vim.fn.getcwd(),
   })
 end, { desc = "Terminal Right" })
-
-vim.keymap.set("n", "<leader>tt", function()
-  terminals.last = "bottom"
-  Snacks.terminal.toggle(nil, {
-    win = { position = "bottom", height = 0.4 },
-    cwd = vim.fn.getcwd(),
-  })
-end, { desc = "Terminal Bottom" })
 
 vim.keymap.set({ "n", "t" }, "<C-/>", function()
   local pos = terminals.last or "float"
