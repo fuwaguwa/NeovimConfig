@@ -27,7 +27,6 @@ return {
     config = function(_, opts)
       require("catppuccin").setup(opts)
       vim.cmd.colorscheme("catppuccin")
-      -- Apply transparency with schedule
       vim.schedule(function()
         -- Main transparency
         vim.api.nvim_set_hl(0, "Normal", { bg = "none" })

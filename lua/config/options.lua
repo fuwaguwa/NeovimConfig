@@ -23,3 +23,4 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 vim.opt.cursorline = false
 vim.opt.wrap = true
 vim.opt.smoothscroll = true
+vim.opt.numberwidth = 1

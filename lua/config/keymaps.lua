@@ -2,21 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- Close buffer
-vim.keymap.set("n", "<M-q>", "<cmd>bdelete<cr>", { desc = "Delete Buffer" })
-
--- Jump to buffer by number (Alt+1 through Alt+9) - safe version
-for i = 1, 9 do
-  vim.keymap.set("n", "<M-" .. i .. ">", function()
-    local ok, bufferline = pcall(require, "bufferline")
-    if ok then
-      bufferline.go_to(i, true)
-    else
-      vim.cmd("buffer " .. i)
-    end
-  end, { desc = "Go to buffer " .. i })
-end
-
 vim.keymap.set("i", "<M-l>", "<Right>", { desc = "Move right in insert mode" })
 vim.keymap.set("i", "<M-h>", "<Left>", { desc = "Move left in insert mode" })
 
