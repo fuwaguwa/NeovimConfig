@@ -7,7 +7,7 @@ return {
       },
       indent = {
         hl = {
-          "SnacksIndent1", -- Regular indent lines
+          "SnacksIndent1",
         },
       },
       dashboard = {
@@ -18,7 +18,6 @@ return {
       scroll = {
         enabled = true,
       },
-      -- Enable explorer
       explorer = {
         replace_netrw = true,
       },
