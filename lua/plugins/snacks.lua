@@ -22,10 +22,6 @@ return {
         replace_netrw = true,
       },
       picker = {
-        toggles = {
-          hidden = { icon = "h", value = true },
-          ignored = { icon = "i", value = true },
-        },
         actions = {
           delete_projects = function(picker, _)
             Snacks.picker.actions.close(picker)
@@ -50,12 +46,12 @@ return {
           explorer = {
             hidden = true,
             ignored = true,
-            follow_file = true,
             auto_close = true,
             jump = { close = true },
             layout = {
               preset = "vertical",
-              backdrop = true,
+              backdrop = false,
+              -- layout = { position = "right", width = 35 },
             },
           },
           files = {

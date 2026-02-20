@@ -37,11 +37,11 @@ return {
         vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" }) -- REMOVED
         vim.api.nvim_set_hl(0, "FloatTitle", { bg = "none" }) -- REMOVED
 
-        -- Explorer transparency
-        vim.api.nvim_set_hl(0, "SnacksNormal", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SnacksNormalNC", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SnacksWinBar", { bg = "none" })
-        vim.api.nvim_set_hl(0, "SnacksBackdrop", { bg = "none" })
+        -- -- Explorer transparency
+        -- vim.api.nvim_set_hl(0, "SnacksNormal", { bg = "none" })
+        -- vim.api.nvim_set_hl(0, "SnacksNormalNC", { bg = "none" })
+        -- vim.api.nvim_set_hl(0, "SnacksWinBar", { bg = "none" })
+        -- vim.api.nvim_set_hl(0, "SnacksBackdrop", { bg = "none" })
 
         -- Status/Win bars
         vim.api.nvim_set_hl(0, "StatusLine", { bg = "none" })
